@@ -65,7 +65,6 @@ public class FamilyActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.word_list);
             mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
             // Create a list of words
             final ArrayList<Word> words = new ArrayList<Word>();
             words.add(new Word("father", "әpә", R.drawable.family_father, R.raw.family_father));

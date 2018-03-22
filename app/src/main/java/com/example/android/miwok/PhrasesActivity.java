@@ -63,7 +63,6 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
         // Create a list of words
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));

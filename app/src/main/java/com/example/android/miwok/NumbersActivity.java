@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class NumbersActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
 
     AudioManager mAudioManager;
+
     AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
@@ -52,6 +54,8 @@ public class NumbersActivity extends AppCompatActivity {
         }
     };
     protected void onCreate(Bundle savedInstanceState) {
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
